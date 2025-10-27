@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+envs/sail-tf1/wheels/
+envs/sail-tf1/venv-sail-tf1.tar.gz
