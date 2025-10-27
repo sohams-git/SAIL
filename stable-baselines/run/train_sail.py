@@ -85,7 +85,7 @@ def a2c_callback(log_dir, max_score, mode):
 
 def load_expert_hyperparams(args):
     with open('../hyperparams/{}.yml'.format(args.algo), 'r') as f:
-        hyperparams_dict = yaml.load(f)
+        hyperparams_dict = yaml.safe_load(f)
         if env_id in list(hyperparams_dict.keys()):
             hyperparams = hyperparams_dict[env_id]
         elif is_atari:
