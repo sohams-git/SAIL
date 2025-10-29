@@ -1,0 +1,24 @@
+name: sail-tf1
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Pin a known-good Python for mujoco-py & older libs
+  - python=3.10
+
+  # Basic build/runtime tools commonly needed on clusters
+  - pip
+  - setuptools
+  - wheel
+
+  # (Optional but useful) system libs that often help mujoco-py/gym on Linux
+  # These are harmless if already available on the cluster
+  - patchelf
+  - glew
+  - glfw
+  - libstdcxx-ng
+  - libgcc-ng
+
+  # Install your exact Python deps from the repo's requirements.txt
+  - pip:
+      - -r envs/sail-tf1/requirements.txt
